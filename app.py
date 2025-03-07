@@ -27,3 +27,8 @@ st.write(df_filtre)
 
 #Saisie du taux de TVA 
 taux_tva = st.slider("Choisir le taux de TVA (%)", min_value=0, max_value=100, value=15)
+
+#Calcul de la TVA
+if st.button("Générer la TVA"):
+    data['TVA'] = data['Prix unitaire en euros'] * data['Quantité vendue'] * (taux_tva/100)
+    st.write(data)
