@@ -24,3 +24,6 @@ produits = data['Produit'].unique()
 choix_produit = st.selectbox("Choisissez un produit :", produits)
 df_filtre = data[data['Produit'] == choix_produit]
 st.write(df_filtre)
+
+#Saisie du taux de TVA 
+taux_tva = st.slider("Choisir le taux de TVA (%)", min_value=0, max_value=100, value=15)
