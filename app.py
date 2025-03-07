@@ -35,3 +35,6 @@ if st.button("Générer la TVA"):
 
 #Convertissage du DataFrame en CSV
 csv = data.to_csv(index=False)
+
+#Création du bouton pour télécharger le CSV
+st.download_button(label="Télécharger le fichier CSV avec TVA", data=csv, file_name="produits_avec_tva.csv", mime="text/csv")
